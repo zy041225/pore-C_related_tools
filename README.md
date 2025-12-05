@@ -1,5 +1,8 @@
 # Tools to process pore-C data
 
+# greedyly extract pairwise contact from BAM
+`python extract_pairs.greedy.v1.1.py ref.fa.fai input.bam | gzip > output.pairs.gz`
+
 ## add simulated enzyme digestion site to pair, column 9 and column 10, therefore determining which contact is valid
 `python check_valid_pairs.v1.py output.sort.pairs.gz DpnII.bed output.sort.add.pairs.gz`
 
